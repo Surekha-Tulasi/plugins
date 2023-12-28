@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        background-color: brown;
+        color: white;
+        text-align: center;
+      }
+      li {
+        list-style: none;
+        background-color: blue;
+        padding: 10px;
+        color: white;
+        margin: 10px;
+        text-align: center;
+      }
+      button {
+        text-align: center;
+        background-color: black;
+        width: 150px;
+        height: 50px;
+        color: white;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi Surekha</h1>
+    <button id="menu">Menu</button>
+    <nav>
+      <ui>
+        <li>Sample</li>
+        <li>Sample</li>
+        <li>Sample</li>
+        <li>Sample</li>
+        <li>Sample</li>
+      </ui>
+    </nav>
+
+    <p>This is Important</p>
+    <input type="text" id="" />
+    <button id="contact">Contact</button>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="fadein">fandein</button>
+    <button id="fadeout">fandeout</button>
+    <button id="fadetoggle">fadeToggle</button>
+    <button id="slidein">SlideIn</button>
+    <button id="slideout">SlideOut</button>
+    <button id="slidetoggle">SlideToggle</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#hide").click(function () {
+          $("h1").hide();
+        });
+
+        $("#show").click(function () {
+          $("h1").show();
+        });
+
+        $("#toggle").click(function () {
+          $("h1").toggle();
+        });
+
+        $("#fadein").click(function () {
+          $("h1").fadeIn();
+        });
+        $("#fadeout").click(function () {
+          $("h1").fadeOut();
+        });
+
+        $("#fadetoggle").click(function () {
+          $("h1").fadeToggle("slow");
+        });
+
+        $("#slidein").click(function () {
+          $("h1").slideUp();
+        });
+
+        $("#slideout").click(function () {
+          $("h1").slideDown();
+        });
+
+        $("#menu").click(function () {
+          $("nav").slideToggle("slow");
+        });
+
+        //getting the value from the output -Get
+        $("#contact").click(function () {
+         let data= $("html").html();
+         alert(data);
+        });
+        $("#contact").click(function () {
+         let data= $("p").text();
+         alert(data);
+        });
+        $("#contact").click(function () {
+         let data= $("input").val();
+         alert(data);
+        });
+
+        //setting the value to the output -set
+
+        $("#contact").click(function () {
+         let data= $("input").val("Helo Surekha");
+         alert(data);
+        });
+        $("#contact").click(function () {
+         let data= $("html").html("Helo Dear Siva");
+         alert(data);
+        });
+        $("#contact").click(function () {
+         let data= $("p").text("SurekhaSiva");
+         alert(data);
+        });
+      });
+    </script>
+  </body>
+</html>
